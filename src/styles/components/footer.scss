@@ -1,0 +1,30 @@
+.footer{
+	font-size:14px;
+	/*font-family: 'helveticaneuemedium';*/
+	color: #404040;
+	max-width: 1300px;
+	margin:auto;
+}
+.footer div{
+	margin-top:240px;
+}
+.footer span.left{
+	float: left;
+}
+.footer ul{
+	float: right;;
+}
+.footer ul li{
+	display: inline-block;
+	margin-right:10px;
+	padding-right:10px;
+	border-right:1px solid #404040;
+}
+.footer ul li:last-child{
+	border-right:none;
+}
+.footer ul li a{
+	text-decoration: none;
+	color:#404040;
+	cursor: pointer;
+}

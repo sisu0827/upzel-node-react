@@ -1,0 +1,238 @@
+/*   
+ * Template Name: Upzel
+ * Version: 1.0
+*/
+/*body{
+	margin:0;
+	padding: 0;
+}
+@font-face {
+    font-family: 'helveticaneue';
+    src: url("../font/HelveticaNeueLight.ttf");
+}
+@font-face {
+    font-family: 'helveticaneuebold';
+    src: url("../font/HelveticaNeueBold.ttf");
+}
+@font-face {
+    font-family: 'helveticaneuemedium';
+    src: url(../font/HelveticaNeue-Medium.otf);
+}
+.content{
+	font-family: 'helveticaneue';
+}*/
+.clear{
+	clear:both;
+}
+.navmenu{
+	border-bottom:1px solid #ccc;
+	margin:auto;
+	position: relative;
+	text-align: center;
+}
+.menucontent{
+	max-width: 1300px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.navmenu .logo{
+	float: left;
+	margin-top:15px;
+}
+.navmenu .menu{
+	float: left;
+	margin-left: 20px;
+	border-right:1px solid #ccc;
+	margin-top: 10px;
+	padding-right:10px;
+}
+.navmenu .menu h2{
+	/*font-family:'helveticaneuemedium';*/
+	font-size: 17px;
+	float: left;
+	color: #404040;
+	margin-top:15px;
+}
+.navmenu .menu i{
+	color: #ccc;
+	font-size: 16px;
+	margin-top:15px;
+	margin-left:20px;
+}
+.navmenu .users{
+	float: left;
+}
+.navmenu .users ul{
+	float: left;
+	margin:0;
+}
+.navmenu .users ul li{
+	display: inline-block;
+	/*font-family: 'helveticaneuemedium';*/
+	font-size: 16px;
+	padding:20px 15px;
+}
+.navmenu .users ul li a{
+	padding:20px 0px;
+	color:#404040;
+	cursor: pointer;
+}
+.navmenu .users ul li:hover{
+	border-bottom:2px solid #3887be;
+}
+.navmenu .users ul li a:hover{
+	color:#3887be;
+	text-decoration: none;
+}
+.navmenu .users i{
+	margin-top:25px;
+	margin-left:10px;
+}
+.navmenu i{
+	float:left;
+}
+.navmenu .profile{
+	float: right;
+}
+.navmenu .notify{
+	float: left;
+	margin-top:20px;
+	position: relative;
+	cursor: pointer;
+}
+.navmenu .notify i{
+	font-size:28px;
+	color:#999;
+	margin-top: -3px;
+}
+.navmenu .notify span{
+	background:#e55e5e;
+	border-radius: 3px;
+	color:#fff;
+	font-family: 'helveticaneuemedium';
+	font-size:15px;
+	padding:1px 3px;
+	margin-left: 3px;
+}
+.navmenu .profile img{
+	float: right;
+	margin-left:30px;
+	margin-top:10px;
+}
+.triangle{
+	width: 0; 
+	height: 0; 
+	position: absolute;
+	box-sizing: border-box;
+	box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25);
+	right:36px;
+	top:-1px;
+}
+.triangle::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    bottom: -2em;
+    left: 50%;
+    box-sizing: border-box;
+    
+    border: 0.9em solid black;
+    border-color: transparent transparent #fff #fff;
+    
+    transform-origin: 0 0;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    
+    box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.25);
+}
+.notifications{
+	width:400px;
+	box-shadow:0px 0px 5px 2px #ccc;
+	border-radius:6px; 
+	right:45px;
+	padding-bottom:20px;
+	position: absolute;
+	background-color: white;
+	z-index: 10;
+}
+.notifications.closed{
+	display: none;
+}
+.notifications .header{
+	padding:10px 20px;
+	border-bottom:1px solid #ccc;
+}
+.notifications .header h2{
+	float: left;
+	/*font-family: 'helveticaneuemedium';*/
+	color:#999999;
+	font-size: 20px;
+	margin-top:4px;
+	margin-bottom: 0px;
+}
+.notifications .header i{
+	float: right;
+	font-size:25px;
+	color:#999;
+}
+.notifications .content ul{
+	margin-left:-40px;
+}
+.notifications .content ul li{
+	display: block;
+	border-bottom: 1px solid #ccc;
+}
+.notifications .content ul li .upperpart{
+	padding:20px 0 10px 0;
+}
+.notifications .content ul li .upperpart .icon{
+	float: left;
+	width:80px;
+}
+.notifications .content ul li .upperpart .text{
+	float: left;
+	width:300px;
+	color:#404040;
+	/*font-family: 'helveticaneue';*/
+	font-size:13px;
+	text-align: left;
+}
+.notifications .content ul li .belowpart{
+	padding:5px 15px;
+	color:#999999;
+	font-size:11px;
+}
+.notifications .content ul li .belowpart .left{
+	float: left;
+}
+.notifications .content ul li .belowpart .right{
+	float: right;
+}
+.maincontent{
+	max-width:1300px;
+	margin:auto;
+	border:2px dotted #999;
+	height :600px;
+	border-radius: 5px;
+	margin-top:20px;
+	position:relative;
+}
+.beforeupload {
+	margin-top: 206px;
+	text-align: center;
+}
+.beforeupload p{
+	font-size:17px;
+	color:#999;
+	/*font-family: 'helveticaneuemedium';*/
+	line-height: 30px;
+	margin-top:20px;
+}
+.beforeupload p a{
+	color:#797979;
+	text-decoration: underline;
+	cursor: pointer;
+}

@@ -1,0 +1,21 @@
+.form-control {
+  &--thin-placeholder {
+    &::-webkit-input-placeholder {
+      font-weight: 300 !important;
+    }
+    &::-moz-placeholder {
+      font-weight: 300 !important;
+    }
+    &:-ms-input-placeholder {
+      font-weight: 300 !important;
+    }
+    &:-moz-placeholder {
+      font-weight: 300 !important;
+    }
+  }
+}
+
+.btn {
+  line-height: 1 !important;
+  outline: none !important;
+}

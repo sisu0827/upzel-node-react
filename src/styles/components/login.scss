@@ -1,0 +1,128 @@
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.login {
+  width: 90%;
+  max-width: 300px;
+  position: relative;
+  margin: 0 auto;
+  font-size: 14px;
+
+  &__logo {
+    padding: 8px 10px;
+    margin-bottom: 9px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    letter-spacing: .1px;
+    margin-bottom: 5px;
+  }
+
+  &__forgot {
+    display: block;
+    padding: 15px 0;
+    color: #585858;
+    font-weight: 300;
+    font-size: 14px;
+    position: relative;
+    text-decoration: underline;
+    letter-spacing: .5px;
+    cursor: pointer;
+
+    &:hover {
+      color: #585858;
+    }
+  }
+
+  label {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  input[type="checkbox"] {
+    margin-top: 2px;
+  }
+
+  .checkbox {
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 3px;
+  }
+
+  .form-control {
+    height: 44px;
+    box-shadow: none;
+
+    &::-webkit-input-placeholder {
+      font-weight: 300;
+    }
+    &::-moz-placeholder {
+      font-weight: 300;
+    }
+    &:-ms-input-placeholder {
+      font-weight: 300;
+    }
+    &:-moz-placeholder {
+      font-weight: 300;
+    }
+  }
+
+  .control-label {
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    height: 44px;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: #3887be;
+    border-color: #3887be;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    outline: none;
+    transition: all 0.4s;
+    letter-spacing: .3px;
+
+    &:hover {
+      background-color: #3bb2d0;
+      border-color: #3bb2d0;
+    }
+  }
+
+  .btn-default {
+    background: none;
+    border: #3887be solid 2px;
+    color: #3887be;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

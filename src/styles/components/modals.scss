@@ -1,0 +1,59 @@
+.modal-dialog {
+  max-width: 500px;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 3px;
+}
+
+.modal-close {
+  float: right;
+  font-size: 21px;
+  opacity: .2;
+  cursor: pointer;
+  margin-top: -2px;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.modal-body {
+  padding: 0px 45px 30px;
+
+  h4 {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  h5 {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 400;
+  }
+
+  .form-control {
+    width: 100%;
+    min-height: 40px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+.modal-footer {
+  text-align: left;
+  font-size: 10px;
+
+  p {
+    margin: 0;
+
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+}

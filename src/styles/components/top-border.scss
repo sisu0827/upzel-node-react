@@ -1,0 +1,38 @@
+.top-border {
+  display: block;
+  height: 6px;
+
+  &:before, &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+
+  span {
+    display: inline-block;
+    width: 20%;
+    float: left;
+    vertical-align: top;
+    height: 6px;
+  }
+
+  &__sec-blue {
+    background: #3887be;
+  }
+
+  &__pri-blue {
+    background: #3bb2d0;
+  }
+
+  &__green {
+    background: #41afa5;
+  }
+
+  &__orange {
+    background: #f9886c;
+  }
+
+  &__red {
+    background: #e55e5e;
+  }  
+}
