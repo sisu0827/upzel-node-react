@@ -1,0 +1,29 @@
+.dragdrop{
+	max-width:1300px;
+	margin:auto;
+	border:2px dotted #999;
+	height :600px;
+	border-radius: 5px;
+	margin-top:20px;
+	position:relative;
+}
+.dragdrop-active{
+	border-color: #4FC47F;
+	border-style: solid;
+}
+.beforeupload {
+	margin-top: 206px;
+	text-align: center;
+}
+.beforeupload p{
+	font-size:17px;
+	color:#999;
+	/*font-family: 'helveticaneuemedium';*/
+	line-height: 30px;
+	margin-top:20px;
+}
+.beforeupload p a{
+	color:#797979;
+	text-decoration: underline;
+	cursor: pointer;
+}

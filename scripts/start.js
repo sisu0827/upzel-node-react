@@ -5,6 +5,18 @@ process.env.NODE_ENV = 'development';
 // that have already been set.
 // https://github.com/motdotla/dotenv
 require('dotenv').config({silent: true});
+var express = require('express');
+var app = express();
+var upload = require('express-fileupload');
+
+// app.use(upload());
+
+// app.get('/test', function(req, res) {
+//   res.send('hello world');
+// });
+// app.post('/upload', function(req, res) {
+//   console.log(req.files);
+// });
 
 var chalk = require('chalk');
 var webpack = require('webpack');
@@ -60,7 +72,7 @@ function setupCompiler(host, port, protocol) {
   // "invalid" is short for "bundle invalidated", it doesn't imply any errors.
   compiler.plugin('invalid', function() {
     if (isInteractive) {
-      clearConsole();
+      // clearConsole();
     }
     console.log('Compiling...');
   });
@@ -71,7 +83,7 @@ function setupCompiler(host, port, protocol) {
   // Whether or not you have warnings or errors, you will get this event.
   compiler.plugin('done', function(stats) {
     if (isInteractive) {
-      clearConsole();
+      // clearConsole();
     }
 
     // We have switched off the default Webpack output in WebpackDevServer
@@ -169,6 +181,24 @@ function addMiddleware(devServer) {
       ['text/html'] :
       ['text/html', '*/*']
   }));
+
+  devServer.use(upload());
+  devServer.use('/upload', function(req, res, next) {
+    if (req.method != 'POST' || !req.files)
+      next();
+
+    for(filename in req.files) {
+      let file = req.files[filename];
+      file.mv('uploads/' + filename, function(err) {
+        if (err) {
+          console.log(err);
+          return res.status(500).send(err);
+        }
+        next();
+      });
+    }
+  });
+
   if (proxy) {
     if (typeof proxy !== 'string') {
       console.log(chalk.red('When specified, "proxy" in package.json must be a string.'));
@@ -204,7 +234,7 @@ function addMiddleware(devServer) {
       ws: true
     });
     devServer.use(mayProxy, hpm);
-
+    
     // Listen for the websocket 'upgrade' event and upgrade the connection.
     // If this is not done, httpProxyMiddleware will not try to upgrade until
     // an initial plain HTTP request is made.
@@ -270,7 +300,7 @@ function runDevServer(host, port, protocol) {
     }
 
     if (isInteractive) {
-      clearConsole();
+      // clearConsole();
     }
     console.log(chalk.cyan('Starting the development server...'));
     console.log();
@@ -284,6 +314,11 @@ function run(port) {
   var host = process.env.HOST || 'localhost';
   setupCompiler(host, port, protocol);
   runDevServer(host, port, protocol);
+  // app.listen(port, function() {
+  //   console.log(chalk.cyan('Development server starting at %s://%s:%s', protocol, host, port));
+  //   openBrowser(protocol + '://' + host + ':' + port + '/');
+  // })
+  // app.listen(port);
 }
 
 // We attempt to use the default port but if it is busy, we offer the user to
@@ -295,7 +330,7 @@ detect(DEFAULT_PORT).then(port => {
   }
 
   if (isInteractive) {
-    clearConsole();
+    // clearConsole();
     var existingProcess = getProcessForPort(DEFAULT_PORT);
     var question =
       chalk.yellow('Something is already running on port ' + DEFAULT_PORT + '.' +
