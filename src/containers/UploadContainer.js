@@ -7,21 +7,21 @@ import request from 'superagent'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-import uploadImage from '../static/images/users.png'
+import uploadImage from '../static/images/users_folder.png'
 
 export default class UploadContainer extends Component {
   onDrop(files) {
     this.setState({
       files: files
     });
-    var req = request.post('/upload');
+    var req = request.post('http://localhost:8080/crmdata/upload');
     files.forEach((file) => req.attach(file.name, file));
     req.end(console.log);
   }
 
   render() {
     return (
-      <div className="content">
+      <div id="content">
         <Header />
         <Dropzone className="dragdrop" activeClassName="dragdrop-active" onDrop={this.onDrop}>
           <div className="beforeupload">

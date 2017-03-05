@@ -1,0 +1,57 @@
+div#numbers {
+	max-width: 1300px;
+	margin: 0 auto;
+	background: transparent;
+	border: none;
+	margin-top: 9px;
+	margin-bottom: 16px;
+
+	a.info {
+		background-color: white;
+		display: inline-flex;
+		width: 420px;
+		padding: 9px 18px;
+		margin-right: 20px;
+		color: #555;
+		text-decoration: none;
+		cursor: pointer;
+		border-radius: 3px;
+
+		i {
+			font-size: 40px;
+		}
+		div.stats {
+			display: inline-block;
+			padding: 0px;
+			margin: 0px 0px 0px 15px;
+
+			h3 {
+				margin: 0px;
+			}
+			small {
+				color: #777;
+			}
+		}
+	}
+	a.total {
+		color: #555;
+	}
+	a.total:hover {
+		border: 2px solid #bbb;
+	}
+	a.likes {
+		color: #f65c5c;
+	}
+	a.likes:hover {
+		border: 2px solid #f65c5c;
+	}
+	a.dislikes {
+		color: #46adf2;
+	}
+	a.dislikes:hover {
+		border: 2px solid #46adf2;
+	}
+	a.info:last-child {
+		margin: 0px;
+	}
+}

@@ -211,3 +211,16 @@
 .notifications .content ul li .belowpart .right{
 	float: right;
 }
+
+div#content {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}

@@ -1,0 +1,88 @@
+div#toolbar {
+	max-width: 1300px;
+	margin: 0 auto;
+	background-color: white;
+	border: none;
+	padding: 9px 15px;
+	margin-top: 9px;
+
+	ul {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+		li {
+			height: 40px;
+			padding-right: 15px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		li:first-child {
+			padding-top: 5px;
+		}
+		li:last-child {
+			padding: 0px;
+		}
+		li a {
+			color: #555;
+			padding: 6px 12px;
+			text-decoration: none;
+			border: 1px solid #eee;
+			display: block;
+		}
+		li a i {
+			font-size: 24px;
+		}
+		li p {
+			margin: 0;
+		}
+	}
+	.search {
+		padding-right: 12px;
+		border-right: 1px solid #ccc;
+		width: 350px;
+
+		input,span {
+			border-radius: 2px;
+		}
+		input#search {
+			height: 40px;
+			border-right-width: 0px;
+			border-bottom-right-radius: 0px;
+			border-top-right-radius: 0px;
+			box-shadow:none;
+ 			-webkit-box-shadow:none; 
+		}
+		input:focus {
+			border-color: #ccc;
+		}
+		span {
+			border-left-width: 0px;
+			border-bottom-left-radius: 0px;
+			border-top-left-radius: 0px;
+			background-color: white;
+		}
+	}
+
+	ul.filterList {
+		margin-left: 10px;
+
+		li {
+			margin-right: 30px;
+			padding-top: 0px;
+		}
+		li:last-child {
+			margin-right: 0px;
+			margin-left: 50px;
+			padding-right: 15px;
+			border-right: 1px solid #ccc;
+		}
+		li p {
+			font-size: 13px;
+		}
+		li b {
+			color: #333;
+			font-size: 15px;
+		}
+	}
+
+}

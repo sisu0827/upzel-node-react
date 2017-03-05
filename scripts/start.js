@@ -183,7 +183,7 @@ function addMiddleware(devServer) {
   }));
 
   devServer.use(upload());
-  devServer.use('/upload', function(req, res, next) {
+  devServer.use('/crmdata/upload', function(req, res, next) {
     if (req.method != 'POST' || !req.files)
       next();
 

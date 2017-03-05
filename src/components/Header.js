@@ -24,7 +24,7 @@ export default class Header extends Component {
     return (
       <div className="navmenu">
         <div className="menucontent">
-            <a href=""><img src={logo} className="logo" /></a>
+            <a href="/"><img src={logo} className="logo" /></a>
             <div className="menu">
                 <h2>ETISALAT</h2>
                 <i className="fa fa-chevron-down" aria-hidden="true"></i>

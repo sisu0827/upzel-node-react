@@ -4,12 +4,12 @@ import { Link } from 'react-router'
 import LoginForm from './forms/LoginForm'
 
 import logo from '../static/images/logotype.svg'
-import loginBg from '../static/images/login-bg.png'
+import Background from '../static/images/bg.png'
 
 export default class Login extends Component {
   render() {
     return (
-      <div className="login-wrapper" style={{ backgroundImage: `url(${loginBg})` }}>
+      <div className="login-wrapper" style={{ backgroundImage: `url(${Background})` }}>
         <div className="login">
           <div className="login__logo">
             <Link to={'/'} className="login__logo-link">
